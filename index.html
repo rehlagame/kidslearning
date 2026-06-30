@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>رحلة التعلم الممتعة</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/canvas.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<main class="app-container">
+
+    <div id="home-screen" class="screen active">
+        <h1 class="main-title">خريطة الكنز 🗺️</h1>
+        <p class="subtitle">اختاروا جزيرة لنبدأ الرحلة!</p>
+
+        <div class="treasure-map">
+            <svg class="map-path" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M 85,85 C 60,90 40,70 20,60 C 10,50 30,30 40,20 C 50,10 70,20 80,30"
+                      fill="transparent" stroke="#FFF" stroke-width="2" stroke-dasharray="3,3" />
+            </svg>
+
+            <button class="island island-1 category-btn" data-target="data/arabic_letters.json">
+                <span class="island-icon">🆎</span>
+                <span class="island-text">حروفنا</span>
+            </button>
+
+            <button class="island island-2 category-btn" data-target="data/arabic_numbers.json">
+                <span class="island-icon">🔢</span>
+                <span class="island-text">أرقامنا</span>
+            </button>
+
+            <button class="island island-3 category-btn" data-target="data/english_letters.json">
+                <span class="island-icon">🔠</span>
+                <span class="island-text">ABC</span>
+            </button>
+
+            <button class="island island-4 category-btn" data-target="data/english_numbers.json">
+                <span class="island-icon">1️⃣</span>
+                <span class="island-text">123</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="drawing-screen" class="screen hidden">
+        <header class="top-bar">
+            <button id="btn-home" class="btn-icon">🏠 العودة</button>
+            <h1 id="level-title">...</h1>
+            <div class="score-board">⭐ <span id="stars-count">0</span></div>
+        </header>
+
+        <section class="canvas-container">
+            <canvas id="drawing-board"></canvas>
+        </section>
+
+        <footer class="bottom-bar">
+            <button id="btn-clear" class="btn btn-secondary">مسح وإعادة 🔄</button>
+            <button id="btn-next" class="btn btn-primary">التالي ➡️</button>
+        </footer>
+    </div>
+
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/tracking.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
