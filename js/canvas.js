@@ -2,7 +2,6 @@
 const canvas = document.getElementById('drawing-board');
 const ctx = canvas.getContext('2d');
 const container = document.querySelector('.canvas-container');
-// تم حذف تعريف زر btnClear من هنا لأنه مبرمج في ملف app.js
 
 // 1. ضبط أبعاد لوحة الرسم لتملأ الحاوية بالكامل
 function resizeCanvas() {
@@ -13,7 +12,9 @@ function resizeCanvas() {
     ctx.lineWidth = 25;           // خط عريض يناسب الأطفال
     ctx.lineCap = 'round';        // نهايات دائرية ناعمة للخط
     ctx.lineJoin = 'round';       // زوايا دائرية عند انحناء الخط
-    ctx.strokeStyle = '#43A047';  // لون أخضر زاهي ومبهج
+
+    // 🎨 قراءة لون القلم الحالي أو استخدام الأخضر كافتراضي
+    ctx.strokeStyle = window.currentPenColor || '#43A047';
 }
 
 // استدعاء الدالة عند البداية، وعند تدوير شاشة الآيباد
@@ -26,6 +27,10 @@ let isDrawing = false;
 // 3. دوال الرسم الأساسية
 function startPosition(e) {
     isDrawing = true;
+
+    // 🎨 التأكد من سحب اللون الجديد في كل مرة يضع فيها الطفل القلم/الإصبع على الشاشة
+    ctx.strokeStyle = window.currentPenColor || '#43A047';
+
     draw(e); // لرسم نقطة بمجرد اللمس دون تحريك
 }
 

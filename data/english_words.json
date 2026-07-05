@@ -1,0 +1,26 @@
+[
+  {"char": "Cat", "name": "Short 'A' Sound"},
+  {"char": "Bat", "name": "Short 'A' Sound"},
+  {"char": "Hat", "name": "Short 'A' Sound"},
+  {"char": "Car", "name": "Short 'A' Sound"},
+
+  {"char": "Pen", "name": "Short 'E' Sound"},
+  {"char": "Bed", "name": "Short 'E' Sound"},
+  {"char": "Red", "name": "Short 'E' Sound"},
+  {"char": "Ten", "name": "Short 'E' Sound"},
+
+  {"char": "Pig", "name": "Short 'I' Sound"},
+  {"char": "Six", "name": "Short 'I' Sound"},
+  {"char": "Zip", "name": "Short 'I' Sound"},
+
+  {"char": "Dog", "name": "Short 'O' Sound"},
+  {"char": "Fox", "name": "Short 'O' Sound"},
+  {"char": "Box", "name": "Short 'O' Sound"},
+
+  {"char": "Sun", "name": "Short 'U' Sound"},
+  {"char": "Cup", "name": "Short 'U' Sound"},
+  {"char": "Bug", "name": "Short 'U' Sound"},
+
+  {"char": "Boy", "name": "Sight Words"},
+  {"char": "Eye", "name": "Sight Words"}
+]

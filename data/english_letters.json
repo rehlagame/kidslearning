@@ -1,15 +1,15 @@
 [
-  {"char": "A", "name": "Letter A"}, {"char": "B", "name": "Letter B"},
-  {"char": "C", "name": "Letter C"}, {"char": "D", "name": "Letter D"},
-  {"char": "E", "name": "Letter E"}, {"char": "F", "name": "Letter F"},
-  {"char": "G", "name": "Letter G"}, {"char": "H", "name": "Letter H"},
-  {"char": "I", "name": "Letter I"}, {"char": "J", "name": "Letter J"},
-  {"char": "K", "name": "Letter K"}, {"char": "L", "name": "Letter L"},
-  {"char": "M", "name": "Letter M"}, {"char": "N", "name": "Letter N"},
-  {"char": "O", "name": "Letter O"}, {"char": "P", "name": "Letter P"},
-  {"char": "Q", "name": "Letter Q"}, {"char": "R", "name": "Letter R"},
-  {"char": "S", "name": "Letter S"}, {"char": "T", "name": "Letter T"},
-  {"char": "U", "name": "Letter U"}, {"char": "V", "name": "Letter V"},
-  {"char": "W", "name": "Letter W"}, {"char": "X", "name": "Letter X"},
-  {"char": "Y", "name": "Letter Y"}, {"char": "Z", "name": "Letter Z"}
+  {"char": "A a", "name": "Letter A"}, {"char": "B b", "name": "Letter B"},
+  {"char": "C c", "name": "Letter C"}, {"char": "D d", "name": "Letter D"},
+  {"char": "E e", "name": "Letter E"}, {"char": "F f", "name": "Letter F"},
+  {"char": "G g", "name": "Letter G"}, {"char": "H h", "name": "Letter H"},
+  {"char": "I i", "name": "Letter I"}, {"char": "J j", "name": "Letter J"},
+  {"char": "K k", "name": "Letter K"}, {"char": "L l", "name": "Letter L"},
+  {"char": "M m", "name": "Letter M"}, {"char": "N n", "name": "Letter N"},
+  {"char": "O o", "name": "Letter O"}, {"char": "P p", "name": "Letter P"},
+  {"char": "Q q", "name": "Letter Q"}, {"char": "R r", "name": "Letter R"},
+  {"char": "S s", "name": "Letter S"}, {"char": "T t", "name": "Letter T"},
+  {"char": "U u", "name": "Letter U"}, {"char": "V v", "name": "Letter V"},
+  {"char": "W w", "name": "Letter W"}, {"char": "X x", "name": "Letter X"},
+  {"char": "Y y", "name": "Letter Y"}, {"char": "Z z", "name": "Letter Z"}
 ]

@@ -1,6 +1,6 @@
-const CACHE_NAME = 'kids-learning-v1';
+const CACHE_NAME = 'kids-learning-v2';
 
-// قائمة بجميع الملفات التي يحتاجها التطبيق ليعمل بدون إنترنت (بما فيها مكتبة القصاصات)
+// قائمة بجميع الملفات التي يحتاجها التطبيق ليعمل بدون إنترنت (بما فيها الملفات المتقدمة)
 const urlsToCache = [
     './',
     './index.html',
@@ -13,12 +13,19 @@ const urlsToCache = [
     './data/arabic_numbers.json',
     './data/english_letters.json',
     './data/english_numbers.json',
+    './data/arabic_words.json',
+    './data/math_equations.json',
+    './data/english_words.json',
+    './data/english_advanced.json',
     './manifest.json',
     'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js'
 ];
 
 // حدث التثبيت: حفظ الملفات في الذاكرة
 self.addEventListener('install', event => {
+    // تفعيل الـ Service Worker الجديد فوراً
+    self.skipWaiting();
+
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
@@ -39,7 +46,7 @@ self.addEventListener('fetch', event => {
     );
 });
 
-// حدث التفعيل: تنظيف أي ملفات قديمة إذا قمنا بتحديث التطبيق مستقبلاً
+// حدث التفعيل: تنظيف أي ملفات قديمة (مثل v1) إذا قمنا بتحديث التطبيق مستقبلاً
 self.addEventListener('activate', event => {
     const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(
@@ -53,4 +60,6 @@ self.addEventListener('activate', event => {
             );
         })
     );
+    // السيطرة على الصفحات المفتوحة فوراً
+    return self.clients.claim();
 });

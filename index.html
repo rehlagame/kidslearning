@@ -6,13 +6,37 @@
     <title>رحلة التعلم الممتعة</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/canvas.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
 </head>
 <body>
 
 <main class="app-container">
 
-    <div id="home-screen" class="screen active">
+    <div id="welcome-screen" class="screen active">
+        <h1 class="main-title" style="font-size: 4rem; margin-bottom: 20px;">مرحباً بك! 🎈</h1>
+        <p class="subtitle" style="font-size: 2rem;">اختر مسار رحلتك يا بطل:</p>
+
+        <div class="levels-container">
+            <button id="btn-basic" class="level-btn basic-btn">
+                <span class="level-icon">👶</span>
+                <span class="level-text">مرحلة التأسيس</span>
+                <span class="level-sub">الحروف والأرقام المفردة</span>
+            </button>
+
+            <button id="btn-advanced" class="level-btn advanced-btn">
+                <span class="level-icon">🚀</span>
+                <span class="level-text">المستوى المتقدم</span>
+                <span class="level-sub">كلمات ومعادلات بسيطة</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="home-screen" class="screen hidden">
+        <header class="top-bar">
+            <button id="btn-back-welcome" class="btn-icon">🔙 تغيير المستوى</button>
+            <div class="score-board">⭐ <span id="map-stars-count">0</span></div>
+        </header>
+
         <h1 class="main-title">خريطة الكنز 🗺️</h1>
         <p class="subtitle">اختاروا جزيرة لنبدأ الرحلة!</p>
 
@@ -22,42 +46,58 @@
                       fill="transparent" stroke="#FFF" stroke-width="2" stroke-dasharray="3,3" />
             </svg>
 
-            <button class="island island-1 category-btn" data-target="data/arabic_letters.json">
+            <button class="island island-1 category-btn" data-target-basic="data/arabic_letters.json" data-target-advanced="data/arabic_words.json">
                 <span class="island-icon">🆎</span>
                 <span class="island-text">حروفنا</span>
             </button>
-
-            <button class="island island-2 category-btn" data-target="data/arabic_numbers.json">
+            <button class="island island-2 category-btn" data-target-basic="data/arabic_numbers.json" data-target-advanced="data/math_equations.json">
                 <span class="island-icon">🔢</span>
                 <span class="island-text">أرقامنا</span>
             </button>
-
-            <button class="island island-3 category-btn" data-target="data/english_letters.json">
+            <button class="island island-3 category-btn" data-target-basic="data/english_letters.json" data-target-advanced="data/english_words.json">
                 <span class="island-icon">🔠</span>
                 <span class="island-text">ABC</span>
             </button>
-
-            <button class="island island-4 category-btn" data-target="data/english_numbers.json">
+            <button class="island island-4 category-btn" data-target-basic="data/english_numbers.json" data-target-advanced="data/english_advanced.json">
                 <span class="island-icon">1️⃣</span>
                 <span class="island-text">123</span>
             </button>
         </div>
     </div>
 
+    <div id="grid-screen" class="screen hidden">
+        <header class="top-bar">
+            <button id="btn-back-home" class="btn-icon">🗺️ الخريطة</button>
+            <h1 id="grid-title" class="main-title" style="font-size: 2.2rem; color: #AB47BC;">اختر وتدرب</h1>
+            <div class="score-board">⭐ <span id="total-stars-count">0</span></div>
+        </header>
+        <section class="grid-container">
+            <div id="items-grid" class="items-grid"></div>
+        </section>
+    </div>
+
     <div id="drawing-screen" class="screen hidden">
         <header class="top-bar">
-            <button id="btn-home" class="btn-icon">🏠 العودة</button>
+            <button id="btn-back-grid" class="btn-icon">🔙 رجوع</button>
             <h1 id="level-title">...</h1>
-            <div class="score-board">⭐ <span id="stars-count">0</span></div>
         </header>
 
         <section class="canvas-container">
             <canvas id="drawing-board"></canvas>
         </section>
 
+        <div class="color-palette">
+            <button class="color-btn active-color" style="background-color: #43A047;" data-color="#43A047"></button>
+            <button class="color-btn" style="background-color: #E53935;" data-color="#E53935"></button>
+            <button class="color-btn" style="background-color: #1E88E5;" data-color="#1E88E5"></button>
+            <button class="color-btn" style="background-color: #FFB300;" data-color="#FFB300"></button>
+            <button class="color-btn" style="background-color: #8E24AA;" data-color="#8E24AA"></button>
+            <button class="color-btn" style="background-color: #000000;" data-color="#000000"></button>
+        </div>
+
         <footer class="bottom-bar">
             <button id="btn-clear" class="btn btn-secondary">مسح وإعادة 🔄</button>
-            <button id="btn-next" class="btn btn-primary">التالي ➡️</button>
+            <button id="btn-next" class="btn btn-primary">إنجاز 🌟</button>
         </footer>
     </div>
 
