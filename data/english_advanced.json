@@ -4,9 +4,9 @@
   {"char": "12", "name": "Number 12"},
   {"char": "20", "name": "Number 20"},
   {"char": "30", "name": "Number 30"},
-  {"char": "1+1=2", "name": "Addition"},
-  {"char": "2+2=4", "name": "Addition"},
-  {"char": "5+0=5", "name": "Addition"},
-  {"char": "3-1=2", "name": "Subtraction"},
-  {"char": "5-5=0", "name": "Subtraction"}
+  {"char": "1+1= ", "name": "Addition"},
+  {"char": "2+2= ", "name": "Addition"},
+  {"char": "5+0= ", "name": "Addition"},
+  {"char": "3-1= ", "name": "Subtraction"},
+  {"char": "5-5= ", "name": "Subtraction"}
 ]
